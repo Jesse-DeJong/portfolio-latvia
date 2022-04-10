@@ -1,0 +1,22 @@
+$heading: 'Megrim', cursive;
+$script: 'Big Shoulders Inline Display', cursive;
+
+* {
+    color: #fff;
+    background-color: black;
+    font-family: $script;
+}
+
+#main {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+}
+
+.landing {
+    font-size: 50px;
+
+    &__heading {
+        font-family: $heading;
+    }
+}

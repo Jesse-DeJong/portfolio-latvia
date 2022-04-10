@@ -1,0 +1,20 @@
+* {
+  color: #fff;
+  background-color: black;
+  font-family: "Big Shoulders Inline Display", cursive;
+}
+
+#main {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+}
+
+.landing {
+  font-size: 50px;
+}
+.landing__heading {
+  font-family: "Megrim", cursive;
+}
+
+/*# sourceMappingURL=style.css.map */
