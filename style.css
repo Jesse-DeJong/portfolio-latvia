@@ -1,3 +1,8 @@
+/* Variables */
+/* Screensize */
+/* Components */
+/* Hover Effect - Mixin's */
+/* Global */
 * {
   color: #fff;
   background-color: black;
@@ -19,19 +24,21 @@ body {
   grid-template-rows: repeat(5, 1fr);
 }
 
+/* Core */
 .landing {
   grid-area: 3/2/4/3;
   /* Row Start, Col Start, Row End, Col End */
   font-size: 50px;
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
 }
 .landing__heading {
   font-family: "Megrim", cursive;
 }
 
+/* ABOUT ME */
 .about {
   display: flex;
   justify-content: center;
@@ -64,6 +71,73 @@ body {
   visibility: visible;
 }
 
+/* ZONE 2 */
+.zone2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: auto;
+}
+.zone2__box1, .zone2__box2 {
+  text-align: center;
+  position: absolute;
+  transition: 1000ms ease;
+}
+.zone2__box1 {
+  font-size: 50px;
+  opacity: 1;
+  visibility: visible;
+}
+.zone2__box2 {
+  font-size: 20px;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.zone2:hover .zone2__box1 {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.zone2:hover .zone2__box2 {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* ZONE 3 */
+.zone3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: auto;
+}
+.zone3__box1, .zone3__box2 {
+  text-align: center;
+  position: absolute;
+  transition: 1000ms ease;
+}
+.zone3__box1 {
+  font-size: 50px;
+  opacity: 1;
+  visibility: visible;
+}
+.zone3__box2 {
+  font-size: 20px;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.zone3:hover .zone3__box1 {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.zone3:hover .zone3__box2 {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* PROJECTS */
 .projects {
   grid-area: 5/1/6/4;
   /* Row Start, Col Start, Row End, Col End */
@@ -76,6 +150,7 @@ body {
   justify-content: space-around;
 }
 
+/* SKILLS */
 .skills {
   grid-area: 1/1/2/4;
   /* Row Start, Col Start, Row End, Col End */
