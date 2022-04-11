@@ -27,6 +27,8 @@ body { min-height: 100%; }
     grid-template-rows: repeat(5, 1fr);
 }
 
+
+
 .landing {
     grid-area: 3 / 2 / 4 / 3; /* Row Start, Col Start, Row End, Col End */
     font-size: 50px;
@@ -42,23 +44,43 @@ body { min-height: 100%; }
 
 }
 
+
+
 .about {
     display: flex;
-
     justify-content: center;
     align-items: center;
 
-    &__heading {
+    width: auto;
+
+    &__box1, &__box2 {
+        text-align: center;
+        position: absolute;
+        transition: 1000ms ease;
+    }
+
+    &__box1 {
         font-size: 50px;
-    }
 
-    &__script {
-        opacity: 0;
-    }
-
-    &__script:hover {
         opacity: 1;
+        visibility: visible;
     }
+    &__box2 {
+        font-size: 20px;
+
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+.about:hover .about__box1 {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.about:hover .about__box2 {
+    opacity: 1;
+    visibility: visible;
 }
 
 
@@ -77,13 +99,15 @@ body { min-height: 100%; }
     }
 }
 
+
+
 .skills {
     grid-area: 1 / 1 / 2 / 4; /* Row Start, Col Start, Row End, Col End */
     display: flex;
 
     justify-content: center;
     align-items: center;
-    
+
     &__list {
         display: flex;
         justify-content: center;
