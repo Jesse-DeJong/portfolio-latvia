@@ -170,7 +170,7 @@ body { min-height: 100%; }
 .zone6 {
     grid-area: 3 / 3 / 4 / 4;
 }
-//Row 3:
+//Row 4:
 .zone7 {
     grid-area: 4 / 1 / 5 / 2;
 }
@@ -192,6 +192,21 @@ body { min-height: 100%; }
 
 
         width: 80%;
+    }
+}
+
+.list__item--cursor {
+    animation: hoverPrompt 1s infinite;
+    animation-direction: alternate;
+}
+
+@keyframes hoverPrompt {
+    from {
+        margin-left: -10px;
+    }
+    to {
+        margin-right: 10px;
+        transform: scale(1.5);
     }
 }
 

@@ -161,6 +161,20 @@ body {
   width: 80%;
 }
 
+.list__item--cursor {
+  animation: hoverPrompt 1s infinite;
+  animation-direction: alternate;
+}
+
+@keyframes hoverPrompt {
+  from {
+    margin-left: -10px;
+  }
+  to {
+    margin-right: 10px;
+    transform: scale(1.5);
+  }
+}
 /* PROJECT Hovers */
 .project {
   display: flex;
