@@ -2,16 +2,20 @@
 $heading: 'Megrim', cursive;
 $script: 'Big Shoulders Inline Display', cursive;
 
+$small: 500px;
+$large: 501px;
 /* Screensize */
-@mixin mobile {
-    grid-template-columns: 1;
-    grid-template-rows: 20;
+@mixin screenSize {
+    @media only screen and (max-width: $small) {
+        grid-template-columns: 1;
+        grid-template-rows: repeat(16, 1fr);
+    }
+    @media only screen and (min-width: $large) {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(5, 1fr);
+    }
 }
 
-@mixin desktop {
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(5, 1fr);
-}
 
 /* Components */
 @mixin flexCenter {
@@ -61,14 +65,18 @@ body { min-height: 100%; }
 
 #main {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(5, 1fr);
+    @include screenSize;
 }
 
 
 /* Core */
 .landing {
-    grid-area: 3 / 2 / 4 / 3; /* Row Start, Col Start, Row End, Col End */
+    @media only screen and (max-width: $small) {
+        grid-area: 6 / 1 / 7 / 2;
+    }
+    @media only screen and (min-width: $large) {
+        grid-area: 3 / 2 / 4 / 3; /* Row Start, Col Start, Row End, Col End */
+    }
     font-size: 50px;
 
     @include flexCenter;
@@ -95,6 +103,12 @@ body { min-height: 100%; }
 
 /* ABOUT ME */
 .about {
+    @media only screen and (max-width: $small) {
+        grid-area: 2 / 1 / 3 / 2;
+    }
+    @media only screen and (min-width: $large) {
+        grid-area: 2 / 1 / 3 / 2; /* Row Start, Col Start, Row End, Col End */
+    }
     @include flexCenter;
 
     width: auto;
@@ -157,41 +171,111 @@ body { min-height: 100%; }
 //Row 2:
 //about
 .zone2 {
-    grid-area: 2 / 2 / 3 / 3;
+    @media only screen and (max-width: $small) {
+        grid-area: 3 / 1 / 4 / 2;
+    }
+    @media only screen and (min-width: $large) {
+        grid-area: 2 / 2 / 3 / 3;
+    }
 }
+
 .zone3 {
-    grid-area: 2 / 3 / 3 / 4;
+    @media only screen and (max-width: $small) {
+        grid-area: 4 / 1 / 5 / 2;
+    }
+    @media only screen and (min-width: $large) {
+        grid-area: 2 / 3 / 3 / 4; /* Row Start, Col Start, Row End, Col End */
+    }
 }
 //Row 3:
 .zone4 {
-    grid-area: 3 / 1 / 4 / 2;
+    @media only screen and (max-width: $small) {
+        grid-area: 5 / 1 / 6 / 2;
+    }
+    @media only screen and (min-width: $large) {
+        grid-area: 3 / 1 / 4 / 2; /* Row Start, Col Start, Row End, Col End */
+    }
 }
 //landing
 .zone6 {
-    grid-area: 3 / 3 / 4 / 4;
+    @media only screen and (max-width: $small) {
+        grid-area: 7 / 1 / 8 / 2;
+    }
+    @media only screen and (min-width: $large) {
+        grid-area: 3 / 3 / 4 / 4; /* Row Start, Col Start, Row End, Col End */
+    }
 }
 //Row 4:
 .zone7 {
-    grid-area: 4 / 1 / 5 / 2;
+    @media only screen and (max-width: $small) {
+        grid-area: 8 / 1 / 9 / 2;
+    }
+    @media only screen and (min-width: $large) {
+        grid-area: 4 / 1 / 5 / 2; /* Row Start, Col Start, Row End, Col End */
+    }
 }
 .zone8 {
-    grid-area: 4 / 2 / 5 / 3;
+    @media only screen and (max-width: $small) {
+        grid-area: 9 / 1 / 10 / 2;
+    }
+    @media only screen and (min-width: $large) {
+        grid-area: 4 / 2 / 5 / 3; /* Row Start, Col Start, Row End, Col End */
+    }
 }
 .zone9 {
-    grid-area: 4 / 3 / 5 / 4;
+    @media only screen and (max-width: $small) {
+        grid-area: 10 / 1 / 11 / 2;
+    }
+    @media only screen and (min-width: $large) {
+        grid-area: 4 / 3 / 5 / 4; /* Row Start, Col Start, Row End, Col End */
+    }
 }
 
 /* PROJECTS */
 .projects {
-    grid-area: 5 / 1 / 6 / 4; /* Row Start, Col Start, Row End, Col End */
-    @include flexCenter;
+    @media only screen and (min-width: $large) {
+        grid-area: 5 / 1 / 6 / 4; /* Row Start, Col Start, Row End, Col End */
+    
+        @include flexCenter;
 
-    &__list {
-        display: flex;
-        justify-content: space-around;
+        &__list {
+            display: flex;
+            justify-content: space-around;
 
+            width: 80%;
+        }
+    }
+}
 
-        width: 80%;
+/* Mobile sizing/layout for projects */
+.project1 {
+    @media only screen and (max-width: $small) {
+    grid-area: 11 / 1 / 12 / 2;
+    }
+}
+.project2 {
+    @media only screen and (max-width: $small) {
+    grid-area: 12 / 1 / 13 / 2;
+    }
+}
+.project3 {
+    @media only screen and (max-width: $small) {
+    grid-area: 13 / 1 / 14 / 2;
+    }
+}
+.project4 {
+    @media only screen and (max-width: $small) {
+    grid-area: 14 / 1 / 15 / 2;
+    }
+}
+.project5 {
+    @media only screen and (max-width: $small) {
+    grid-area: 15 / 1 / 16 / 2;
+    }
+}
+.project6 {
+    @media only screen and (max-width: $small) {
+    grid-area: 16 / 1 / 17 / 2;
     }
 }
 
@@ -243,7 +327,13 @@ body { min-height: 100%; }
 
 /* SKILLS */
 .skills {
-    grid-area: 1 / 1 / 2 / 4; /* Row Start, Col Start, Row End, Col End */
+    @media only screen and (max-width: $small) {
+        grid-area: 1 / 1 / 2 / 2;
+    }
+    @media only screen and (min-width: $large) {
+        grid-area: 1 / 1 / 2 / 4; /* Row Start, Col Start, Row End, Col End */
+    }
+    
     @include flexCenter;
 
     &__list {
