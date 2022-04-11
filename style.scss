@@ -49,7 +49,7 @@ $script: 'Big Shoulders Inline Display', cursive;
 
 /* Global */
 * {
-    color: #fff;
+    color: white;
     background-color: black;
     font-family: $script;
     list-style-type: none;
@@ -79,6 +79,18 @@ body { min-height: 100%; }
 
 }
 
+/* Menu */
+#menu {
+    display: inline-block;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+
+    font-size: 20px;
+}
+#menu:hover {
+    cursor: pointer;
+}
 
 /* ABOUT ME */
 .about {
@@ -179,7 +191,39 @@ body { min-height: 100%; }
         display: flex;
         justify-content: space-around;
 
+
+        width: 80%;
     }
+}
+
+/* PROJECT Hovers */
+.project {
+    @include flexCenter;
+
+    width: auto;
+
+    &__box1, &__box2 {
+        @include box1and2;
+    }
+
+    &__box1 {
+        font-size: 50px;
+
+        @include box1;
+    }
+    &__box2 {
+        font-size: 20px;
+
+        @include box2;
+    }
+}
+
+.project:hover .project__box1 {
+    @include box1Hover;
+}
+
+.project:hover .project__box2 {
+    @include box2Hover;
 }
 
 
