@@ -1,12 +1,25 @@
 $heading: 'Megrim', cursive;
 $script: 'Big Shoulders Inline Display', cursive;
 
+@mixin mobile {
+    grid-template-columns: 1;
+    grid-template-rows: 20;
+}
+
+@mixin desktop {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+}
+
 * {
     color: #fff;
     background-color: black;
     font-family: $script;
     list-style-type: none;
 }
+
+html { height: 100%; }
+body { min-height: 100%; }
 
 #main {
     display: grid;
@@ -18,28 +31,68 @@ $script: 'Big Shoulders Inline Display', cursive;
     grid-area: 3 / 2 / 4 / 3; /* Row Start, Col Start, Row End, Col End */
     font-size: 50px;
 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
     &__heading {
         font-family: $heading;
     }
+
 }
+
+.about {
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    &__heading {
+        font-size: 50px;
+    }
+
+    &__script {
+        opacity: 0;
+    }
+
+    &__script:hover {
+        opacity: 1;
+    }
+}
+
+
 
 .projects {
     grid-area: 5 / 1 / 6 / 4; /* Row Start, Col Start, Row End, Col End */
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
 
     &__list {
         display: flex;
+        justify-content: space-around;
+
     }
 }
 
 .skills {
     grid-area: 1 / 1 / 2 / 4; /* Row Start, Col Start, Row End, Col End */
+    display: flex;
 
+    justify-content: center;
+    align-items: center;
+    
     &__list {
         display: flex;
+        justify-content: center;
+        
     }
 }
 
 .list__item {
     font-size: 50px;
     padding: 0px 20px;
+
 }
