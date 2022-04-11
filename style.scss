@@ -53,6 +53,7 @@ $script: 'Big Shoulders Inline Display', cursive;
     background-color: black;
     font-family: $script;
     list-style-type: none;
+    border-radius: 5px;
 }
 
 html { height: 100%; }
@@ -122,64 +123,62 @@ body { min-height: 100%; }
     @include box2Hover;
 }
 
-/* ZONE 2 */
+/* ZONE's */
+.zone {
+    @include flexCenter;
+
+    width: auto;
+
+    &__box1, &__box2 {
+        @include box1and2;
+    }
+
+    &__box1 {
+        font-size: 50px;
+
+        @include box1;
+    }
+    &__box2 {
+        font-size: 20px;
+
+        @include box2;
+    }
+}
+
+.zone:hover .zone__box1 {
+    @include box1Hover;
+}
+
+.zone:hover .zone__box2 {
+    @include box2Hover;
+}
+
+/* ZONE Grid Assign */
+//Row 2:
+//about
 .zone2 {
-    @include flexCenter;
-
-    width: auto;
-
-    &__box1, &__box2 {
-        @include box1and2;
-    }
-
-    &__box1 {
-        font-size: 50px;
-
-        @include box1;
-    }
-    &__box2 {
-        font-size: 20px;
-
-        @include box2;
-    }
+    grid-area: 2 / 2 / 3 / 3;
 }
-
-.zone2:hover .zone2__box1 {
-    @include box1Hover;
-}
-
-.zone2:hover .zone2__box2 {
-    @include box2Hover;
-}
-
-/* ZONE 3 */
 .zone3 {
-    @include flexCenter;
-
-    width: auto;
-
-    &__box1, &__box2 {
-        @include box1and2;
-    }
-
-    &__box1 {
-        font-size: 50px;
-
-        @include box1;
-    }
-    &__box2 {
-        font-size: 20px;
-
-        @include box2;
-    }
+    grid-area: 2 / 3 / 3 / 4;
 }
-
-.zone3:hover .zone3__box1 {
-    @include box1Hover;
+//Row 3:
+.zone4 {
+    grid-area: 3 / 1 / 4 / 2;
 }
-
-.zone3:hover .zone3__box2 {
-    @include box2Hover;
+//landing
+.zone6 {
+    grid-area: 3 / 3 / 4 / 4;
+}
+//Row 3:
+.zone7 {
+    grid-area: 4 / 1 / 5 / 2;
+}
+.zone8 {
+    grid-area: 4 / 2 / 5 / 3;
+}
+.zone9 {
+    grid-area: 4 / 3 / 5 / 4;
 }
 
 /* PROJECTS */
