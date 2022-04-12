@@ -30,7 +30,7 @@ body {
 }
 @media only screen and (min-width: 501px) {
   #main {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: 50px repeat(3, 1fr) 50px;
     grid-template-rows: repeat(5, 1fr);
     height: 1000px;
   }
@@ -51,7 +51,7 @@ body {
 }
 @media only screen and (min-width: 501px) {
   .landing {
-    grid-area: 3/2/4/3;
+    grid-area: 3/3/4/4;
     /* Row Start, Col Start, Row End, Col End */
   }
 }
@@ -86,7 +86,7 @@ body {
 }
 @media only screen and (min-width: 501px) {
   .about {
-    grid-area: 4/2/5/3;
+    grid-area: 4/3/5/4;
     /* Row Start, Col Start, Row End, Col End */
   }
 }
@@ -159,79 +159,7 @@ body {
 }
 @media only screen and (min-width: 501px) {
   .zone2 {
-    grid-area: 2/2/3/3;
-  }
-}
-
-@media only screen and (max-width: 500px) {
-  .zone3 {
-    grid-area: 4/1/5/2;
-  }
-}
-@media only screen and (min-width: 501px) {
-  .zone3 {
     grid-area: 2/3/3/4;
-    /* Row Start, Col Start, Row End, Col End */
-  }
-}
-
-@media only screen and (max-width: 500px) {
-  .zone4 {
-    grid-area: 5/1/6/2;
-  }
-}
-@media only screen and (min-width: 501px) {
-  .zone4 {
-    grid-area: 3/1/4/2;
-    /* Row Start, Col Start, Row End, Col End */
-  }
-}
-
-@media only screen and (max-width: 500px) {
-  .zone6 {
-    grid-area: 7/1/8/2;
-  }
-}
-@media only screen and (min-width: 501px) {
-  .zone6 {
-    grid-area: 3/3/4/4;
-    /* Row Start, Col Start, Row End, Col End */
-  }
-}
-
-@media only screen and (max-width: 500px) {
-  .zone7 {
-    grid-area: 8/1/9/2;
-  }
-}
-@media only screen and (min-width: 501px) {
-  .zone7 {
-    grid-area: 4/1/5/2;
-    /* Row Start, Col Start, Row End, Col End */
-  }
-}
-
-@media only screen and (max-width: 500px) {
-  .zone8 {
-    grid-area: 9/1/10/2;
-  }
-}
-@media only screen and (min-width: 501px) {
-  .zone8 {
-    grid-area: 2/1/3/2;
-    /* Row Start, Col Start, Row End, Col End */
-  }
-}
-
-@media only screen and (max-width: 500px) {
-  .zone9 {
-    grid-area: 10/1/11/2;
-  }
-}
-@media only screen and (min-width: 501px) {
-  .zone9 {
-    grid-area: 4/3/5/4;
-    /* Row Start, Col Start, Row End, Col End */
   }
 }
 
@@ -251,41 +179,92 @@ body {
   }
 }
 
-/* Mobile sizing/layout for projects */
+/* Mobile and Desktop layout for projects */
 @media only screen and (max-width: 500px) {
   .project1 {
-    grid-area: 11/1/12/2;
+    grid-area: 9/1/10/2;
+  }
+}
+@media only screen and (min-width: 501px) {
+  .project1 {
+    grid-area: 2/2/3/3;
+    /* Row Start, Col Start, Row End, Col End */
+  }
+}
+
+@media only screen and (min-width: 501px) {
+  #projectOne {
+    grid-area: 2/1/3/2;
+    /* Row Start, Col Start, Row End, Col End */
   }
 }
 
 @media only screen and (max-width: 500px) {
   .project2 {
-    grid-area: 12/1/13/2;
+    grid-area: 5/1/6/2;
+  }
+}
+@media only screen and (min-width: 501px) {
+  .project2 {
+    grid-area: 3/2/4/3;
+    /* Row Start, Col Start, Row End, Col End */
   }
 }
 
 @media only screen and (max-width: 500px) {
   .project3 {
-    grid-area: 13/1/14/2;
+    grid-area: 8/1/9/2;
+  }
+}
+@media only screen and (min-width: 501px) {
+  .project3 {
+    grid-area: 4/2/5/3;
+    /* Row Start, Col Start, Row End, Col End */
   }
 }
 
 @media only screen and (max-width: 500px) {
   .project4 {
-    grid-area: 14/1/15/2;
+    grid-area: 4/1/5/2;
+  }
+}
+@media only screen and (min-width: 501px) {
+  .project4 {
+    grid-area: 2/4/3/5;
+    /* Row Start, Col Start, Row End, Col End */
   }
 }
 
 @media only screen and (max-width: 500px) {
   .project5 {
-    grid-area: 15/1/16/2;
+    grid-area: 7/1/8/2;
+  }
+}
+@media only screen and (min-width: 501px) {
+  .project5 {
+    grid-area: 3/4/4/5;
+    /* Row Start, Col Start, Row End, Col End */
   }
 }
 
 @media only screen and (max-width: 500px) {
   .project6 {
-    grid-area: 16/1/17/2;
+    grid-area: 10/1/11/2;
   }
+}
+@media only screen and (min-width: 501px) {
+  .project6 {
+    grid-area: 4/4/5/5;
+    /* Row Start, Col Start, Row End, Col End */
+  }
+}
+
+.arrow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 50px;
+  color: white;
 }
 
 .list__item--cursor {
@@ -349,7 +328,7 @@ body {
 }
 @media only screen and (min-width: 501px) {
   .skills {
-    grid-area: 1/1/2/4;
+    grid-area: 1/2/2/5;
     /* Row Start, Col Start, Row End, Col End */
   }
 }

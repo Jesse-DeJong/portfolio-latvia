@@ -1,7 +1,10 @@
-const height = window.innerHeight;
-const width = window.innerWidth;
+import Swup from 'swup';
+const swup = new Swup();
 
-const main = document.getElementById('main');
+// const height = window.innerHeight;
+// const width = window.innerWidth;
 
-main.setAttribute('height', height);
-main.setAttribute('width', width);
+// const main = document.getElementById('main');
+
+// main.setAttribute('height', height);
+// main.setAttribute('width', width);
