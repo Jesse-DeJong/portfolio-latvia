@@ -14,7 +14,7 @@ $large: 501px;
     @media only screen and (min-width: $large) {
         grid-template-columns: 50px repeat(3, 1fr) 50px;
         grid-template-rows: repeat(5, 1fr);
-        height: 1000px;
+        height: 900px;
     }
 }
 
@@ -290,6 +290,10 @@ body { min-height: 100%; }
         font-size: 20px;
 
         @include box2;
+    }
+
+    &__script {
+        padding: 2px 0px;
     }
 }
 
